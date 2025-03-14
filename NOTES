@@ -1,0 +1,10 @@
+Adding the repo as the first repo:
+```
+git remote add origin orange:git_test_private_server_deployment
+git push --set-upstream origin master
+```
+
+Adding the repo while there's already one repo added:
+```
+git remote set-url origin --push --add orange:git_test_private_server_deployment
+```
