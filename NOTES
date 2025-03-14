@@ -1,3 +1,9 @@
+#### UPDATE ####
+
+You don't have to do anything new now, now everything is handled by the deploy script. Pushing to Github and adding its repo is the same as always, and you *really* don't have to do anything to have it all work successfully. This is a message from megahomyak to megahomyak, by the way. Your mileage may vary.
+
+################
+
 Adding the repo as the first repo:
 ```
 git remote add origin git@github.com:megahomyak/git_test_private_server_deployment.git
