@@ -1,10 +1,16 @@
 Adding the repo as the first repo:
 ```
-git remote add origin orange:git_test_private_server_deployment
-git push --set-upstream origin master
+git remote add origin git@github.com:megahomyak/git_test_private_server_deployment.git
 ```
 
 Adding the repo while there's already one repo added:
 ```
-git remote set-url origin --push --add orange:git_test_private_server_deployment
+git remote set-url origin --add git@github.com:megahomyak/git_test_private_server_deployment.git # Original repo (that was added first); yes, that's genuinely how this is intended to be used
+git remote set-url origin --add --push orange:git_test_private_server_deployment # Finally, the repo we want to add
+```
+
+But if one repo will be used only for deployment, IMO it will make sense to add another "remote" for it and only push there in deploy scripts:
+```
+git remote add origin git@github.com:megahomyak/git_test_private_server_deployment.git
+git remote add deployment orange:git_test_private_server_deployment # Actually, this can be handled by the deploy script
 ```
